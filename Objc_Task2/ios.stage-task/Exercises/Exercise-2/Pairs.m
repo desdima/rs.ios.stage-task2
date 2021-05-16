@@ -17,8 +17,9 @@
     for (int i = 0; i < sortArray.count; i++) {
         long i_num = [sortArray[i] integerValue];
         for (int j = i + 1; j < sortArray.count; j++) {
-            if (i_num == [sortArray[j] integerValue] + pairNum) countPairs++;
+            if (i_num == [sortArray[j] integerValue] - pairNum) countPairs++;
         }
+        if (pairNum == 0) return countPairs;
     }
     
     return countPairs;
