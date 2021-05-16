@@ -14,7 +14,7 @@ UInt8 ReverseInteger(UInt8 n) {
     }
     long t = [binStr length];
     NSString *zero = @"0";
-    //NSMutableString *binStr1 = [binStr mutableCopy];
+    
     for (int i = 0; i < 8 - t; i++) {
         //[binStr1 insertString:zero atIndex:0];
         binStr = [binStr stringByAppendingString:zero];
