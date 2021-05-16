@@ -57,6 +57,7 @@
     unionArray = unionArray3;
     
     if (unionArrayInt.count != 0) {
+        [unionArrayInt sortUsingSelector:@selector(compare:)];
         [unionArrayInt3 insertObject:unionArrayInt[0] atIndex:0];
         j = 1;
         for (int i = 1; i < unionArrayInt.count; i++) {
@@ -66,10 +67,11 @@
             }
         }
         unionArrayInt = unionArrayInt3;
-        [unionArrayInt sortUsingSelector:@selector(compare:)];
+        
     }
     
     if (unionArrayStr.count != 0) {
+        [unionArrayStr sortUsingSelector:@selector(compare:)];
         [unionArrayStr3 insertObject:unionArrayStr[0] atIndex:0];
         j = 1;
         for (int i = 1; i < unionArrayStr.count; i++) {
@@ -79,8 +81,6 @@
             }
         }
         unionArrayStr = unionArrayStr3;
-        
-        [unionArrayStr sortUsingSelector:@selector(compare:)];
     }
     
     NSMutableArray *unionArrayInt2 = [[NSMutableArray alloc] init];
